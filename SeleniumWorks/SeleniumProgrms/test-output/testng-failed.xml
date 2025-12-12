@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Assignments.MultipleWindowTest">
+      <class name="Assignments.MultipleDropDownTest">
         <methods>
-          <include name="switchWindow"/>
+          <include name="performMultipleDropDown"/>
         </methods>
-      </class> <!-- Assignments.MultipleWindowTest -->
+      </class> <!-- Assignments.MultipleDropDownTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-12T00:17:37 IST" name="Default suite" finished-at="2025-12-12T00:17:48 IST" duration-ms="10943">
+  <suite started-at="2025-12-12T15:04:25 IST" name="Default suite" finished-at="2025-12-12T15:04:34 IST" duration-ms="9043">
     <groups>
     </groups>
-    <test started-at="2025-12-12T00:17:37 IST" name="Default test" finished-at="2025-12-12T00:17:48 IST" duration-ms="10943">
-      <class name="AlertHandling.PromptAlertTest">
-        <test-method signature="checkAlert()[pri:0, instance:AlertHandling.PromptAlertTest@55182842]" started-at="2025-12-12T00:17:38 IST" name="checkAlert" finished-at="2025-12-12T00:17:48 IST" duration-ms="10896" status="PASS">
+    <test started-at="2025-12-12T15:04:25 IST" name="Default test" finished-at="2025-12-12T15:04:34 IST" duration-ms="9043">
+      <class name="Actions.DragNDropTest">
+        <test-method signature="performDragNDrop()[pri:0, instance:Actions.DragNDropTest@74235045]" started-at="2025-12-12T15:04:25 IST" name="performDragNDrop" finished-at="2025-12-12T15:04:34 IST" duration-ms="9009" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkAlert -->
-      </class> <!-- AlertHandling.PromptAlertTest -->
+        </test-method> <!-- performDragNDrop -->
+      </class> <!-- Actions.DragNDropTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

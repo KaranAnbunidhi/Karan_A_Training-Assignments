@@ -34,6 +34,13 @@ public class MultipleWindowTest {
 		driver.switchTo().window(parentWindow);
 		System.out.println("Switched to Parent Window");
 		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#opentab"))).sendKeys(Keys.ENTER);
-		System.out.println("Switched to New Tab");
+		
+//		Set<String> tabs=driver.getWindowHandles();
+//		for(String eachTab:allwindows) {
+//			if(!eachTab.equals(parentWindow)) {
+//				driver.switchTo().window(eachTab);
+//			}
+//		}
+//		System.out.println("Switched to New Tab");
 	}
 }

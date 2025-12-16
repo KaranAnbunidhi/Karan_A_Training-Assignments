@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Assignments.MultipleDropDownTest">
+      <class name="TestNG.BooksWagonTest">
         <methods>
-          <include name="performMultipleDropDown"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="nThProduct"/>
         </methods>
-      </class> <!-- Assignments.MultipleDropDownTest -->
+      </class> <!-- TestNG.BooksWagonTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

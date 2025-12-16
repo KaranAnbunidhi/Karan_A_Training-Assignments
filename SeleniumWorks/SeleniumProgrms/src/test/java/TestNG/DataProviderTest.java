@@ -5,7 +5,6 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -17,55 +16,76 @@ import org.testng.annotations.Test;
 
 public class DataProviderTest {
 
-	WebDriver driver;
+    WebDriver driver;
 
-	@BeforeClass
-	public void beforeClass() {
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("https://www.bookswagon.com/");
-	}
+    @BeforeClass
+    public void setup() {
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://www.bookswagon.com/");
+    }
 
-	@Test(dataProvider = "getTestData")
-	public void testDataProvider(String bookName, String sortBy, int nthBook) {
+    @Test(dataProvider = "bookData")
+    public void searchSortAndFetchNthProduct(
+            String searchText,
+            String sortOption,
+            int nthProduct
+    ) {
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
-		WebElement search = driver.findElement(By.id("inputbar"));
-		search.clear();
-		search.sendKeys(bookName);
-		search.sendKeys(Keys.ENTER);
+        // 🔹 Search
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("inputbar")))
+            .clear();
+        driver.findElement(By.className("inputbar")).sendKeys(searchText);
+        driver.findElement(By.name("btnTopSearch")).sendKeys(Keys.ENTER);
 
-		System.out.println(driver.findElement(By.className("preferences-show")).getText());
+        // 🔹 Wait for results
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.className("preferences-show")));
 
-		Select sort = new Select(driver.findElement(By.id("ddlSort")));
-		sort.selectByVisibleText(sortBy);
+        // 🔹 Capture old nth product text (before sorting)
+        String oldText = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        By.xpath("(//div[@class='title'])[" + nthProduct + "]/a")
+                )).getText();
 
-//	  List<WebElement> results = driver.findElements(By.className("list-view-books"));
-//	  System.out.println(results.size());
-//	  while(n <= results.size()) {
-//		  driver.findElement(By.id("lastPostLoader")).click();
-//		  results = driver.findElements(By.className("list-view-books"));
-//	  }
+        // 🔹 Apply sorting
+        Select sort = new Select(
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("ddlSort")))
+        );
+        sort.selectByVisibleText(sortOption);
 
-		String getBook = wait
-				.until(ExpectedConditions
-						.visibilityOf(driver.findElement(By.xpath("(//div[@class='title'])[" + nthBook + "]/a"))))
-				.getText();
-		System.out.println(getBook);
+        // 🔹 Wait until sorting changes the product list
+        wait.until(ExpectedConditions.not(
+                ExpectedConditions.textToBePresentInElementLocated(
+                        By.xpath("(//div[@class='title'])[" + nthProduct + "]/a"),
+                        oldText
+                )
+        ));
 
-	}
+        // 🔹 Fetch nth product AFTER sorting
+        String newText = driver
+                .findElement(By.xpath("(//div[@class='title'])[" + nthProduct + "]/a"))
+                .getText();
 
-	@DataProvider
-	public Object[][] getTestData() {
-		Object[][] data = new Object[][] { { "Selenium", "Price - Low to High", 4 },
-				{ "Java", "Discount - High to Low", 7 } };
-		return data;
-	}
+        System.out.println(
+                "Search: " + searchText +
+                " | Sort: " + sortOption +
+                " | Nth Product: " + newText
+        );
+    }
 
-	@AfterClass
-	public void afterClass() {
-		driver.quit();
-	}
+    @DataProvider(name = "bookData")
+    public Object[][] getBookData() {
+        return new Object[][] {
+                { "Java", "Price - Low to High", 2 },
+                { "Selenium", "Discount - High to Low", 3 }
+        };
+    }
 
+    @AfterClass
+    public void tearDown() {
+        driver.quit();
+    }
 }

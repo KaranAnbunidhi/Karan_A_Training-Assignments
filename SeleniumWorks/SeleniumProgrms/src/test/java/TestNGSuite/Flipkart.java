@@ -6,7 +6,7 @@ public class Flipkart {
   
   @Test
   public void fLogin() {
-	  System.out.println("This is  Flipkart Login Page");
+	  System.out.println("This is Flipkart Login Page");
   }
 
   @Test

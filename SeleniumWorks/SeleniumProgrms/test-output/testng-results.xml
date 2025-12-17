@@ -1,39 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="3" total="6" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-17T11:35:55 IST" name="Suite" finished-at="2025-12-17T11:35:55 IST" duration-ms="84">
+  <suite started-at="2025-12-17T11:58:33 IST" name="Suite" finished-at="2025-12-17T11:58:33 IST" duration-ms="64">
     <groups>
+      <group name="Regression Test">
+        <method signature="Amazon.aSearchProduct()[pri:0, instance:TestNG.Amazon@54d9d12d]" name="aSearchProduct" class="TestNG.Amazon"/>
+      </group> <!-- Regression Test -->
+      <group name="Smoke Test">
+        <method signature="Amazon.aLogin()[pri:0, instance:TestNG.Amazon@54d9d12d]" name="aLogin" class="TestNG.Amazon"/>
+        <method signature="Amazon.aSearchProduct()[pri:0, instance:TestNG.Amazon@54d9d12d]" name="aSearchProduct" class="TestNG.Amazon"/>
+        <method signature="Flipkart.fSearchProduct()[pri:0, instance:TestNG.Flipkart@2d1ef81a]" name="fSearchProduct" class="TestNG.Flipkart"/>
+      </group> <!-- Smoke Test -->
     </groups>
-    <test started-at="2025-12-17T11:35:55 IST" name="Test" finished-at="2025-12-17T11:35:55 IST" duration-ms="84">
-      <class name="TestNGSuite.Amazon">
-        <test-method signature="aLogin()[pri:0, instance:TestNGSuite.Amazon@3c41ed1d]" started-at="2025-12-17T11:35:55 IST" name="aLogin" finished-at="2025-12-17T11:35:55 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aLogin -->
-        <test-method signature="aSearchProduct()[pri:0, instance:TestNGSuite.Amazon@3c41ed1d]" started-at="2025-12-17T11:35:55 IST" name="aSearchProduct" finished-at="2025-12-17T11:35:55 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aSearchProduct -->
-        <test-method signature="aSelectProduct()[pri:0, instance:TestNGSuite.Amazon@3c41ed1d]" started-at="2025-12-17T11:35:55 IST" name="aSelectProduct" finished-at="2025-12-17T11:35:55 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aSelectProduct -->
-      </class> <!-- TestNGSuite.Amazon -->
-      <class name="TestNGSuite.Flipkart">
-        <test-method signature="fLogin()[pri:0, instance:TestNGSuite.Flipkart@3c46e67a]" started-at="2025-12-17T11:35:55 IST" name="fLogin" finished-at="2025-12-17T11:35:55 IST" duration-ms="17" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- fLogin -->
-        <test-method signature="fSearchProduct()[pri:0, instance:TestNGSuite.Flipkart@3c46e67a]" started-at="2025-12-17T11:35:55 IST" name="fSearchProduct" finished-at="2025-12-17T11:35:55 IST" duration-ms="2" status="PASS">
+    <test started-at="2025-12-17T11:58:33 IST" name="Test" finished-at="2025-12-17T11:58:33 IST" duration-ms="64">
+      <class name="TestNG.Flipkart">
+        <test-method signature="fSearchProduct()[pri:0, instance:TestNG.Flipkart@2d1ef81a]" started-at="2025-12-17T11:58:33 IST" name="fSearchProduct" finished-at="2025-12-17T11:58:33 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fSearchProduct -->
-        <test-method signature="fSelectProduct()[pri:0, instance:TestNGSuite.Flipkart@3c46e67a]" started-at="2025-12-17T11:35:55 IST" name="fSelectProduct" finished-at="2025-12-17T11:35:55 IST" duration-ms="3" status="PASS">
+      </class> <!-- TestNG.Flipkart -->
+      <class name="TestNG.Amazon">
+        <test-method signature="aLogin()[pri:0, instance:TestNG.Amazon@54d9d12d]" started-at="2025-12-17T11:58:33 IST" name="aLogin" finished-at="2025-12-17T11:58:33 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fSelectProduct -->
-      </class> <!-- TestNGSuite.Flipkart -->
+        </test-method> <!-- aLogin -->
+        <test-method signature="aSearchProduct()[pri:0, instance:TestNG.Amazon@54d9d12d]" started-at="2025-12-17T11:58:33 IST" name="aSearchProduct" finished-at="2025-12-17T11:58:33 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aSearchProduct -->
+      </class> <!-- TestNG.Amazon -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

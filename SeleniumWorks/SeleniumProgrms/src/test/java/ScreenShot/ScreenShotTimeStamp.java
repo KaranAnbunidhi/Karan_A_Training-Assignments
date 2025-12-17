@@ -2,7 +2,9 @@ package ScreenShot;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,7 +24,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class ScreenShotTest {
+public class ScreenShotTimeStamp {
 	WebDriver driver;
 
 	@BeforeClass
@@ -44,7 +46,7 @@ public class ScreenShotTest {
 		WebElement username = driver.findElement(By.id("user-name"));
 		username.sendKeys("standard_user");
 		WebElement password = driver.findElement(By.name("password"));
-		password.sendKeys("secret_sauce");
+		password.sendKeys("secret_sauc");
 		WebElement login = driver.findElement(By.id("login-button"));
 		login.click();
 
@@ -54,6 +56,15 @@ public class ScreenShotTest {
 			wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.className("title")));
 		} catch (TimeoutException te) {
 			System.out.println("Taking Screenshot for Login Failure");
+			
+			
+			Date date=new Date();
+			SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMdd_HHmmss");
+			String timeStamp=sdf.format(date);
+			
+//			Anonymous Object-handled by JVM
+//			String timeStamp=new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+			
 			// Step 1: Convert WebDriver object to TakesScreenshot
 			TakesScreenshot ts = (TakesScreenshot) driver;
 
@@ -61,7 +72,7 @@ public class ScreenShotTest {
 			File src = ts.getScreenshotAs(OutputType.FILE);
 
 			// Step 3: Create destination file
-			File dest = new File("screenshots/LoginFailure");
+			File dest = new File("screenshots/"+timeStamp+"_LoginFailure");
 
 			// Step 4: Copy file from source to destination
 			try {

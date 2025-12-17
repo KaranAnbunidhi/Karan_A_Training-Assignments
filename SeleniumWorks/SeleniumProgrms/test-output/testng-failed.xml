@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Assert.SoftAssertDemo">
+      <class name="ScreenShot.ScreenShotTimeStamp">
         <methods>
-          <include name="testHardAssert"/>
-          <include name="testSoftAssert"/>
+          <include name="beforeClass"/>
+          <include name="Login"/>
+          <include name="afterClass"/>
         </methods>
-      </class> <!-- Assert.SoftAssertDemo -->
+      </class> <!-- ScreenShot.ScreenShotTimeStamp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

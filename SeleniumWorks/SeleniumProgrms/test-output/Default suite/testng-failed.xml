@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ScreenShot.ScreenShotTimeStamp">
+      <class name="Practice.zeptoo">
         <methods>
-          <include name="beforeClass"/>
-          <include name="Login"/>
-          <include name="afterClass"/>
+          <include name="productsCheckout"/>
         </methods>
-      </class> <!-- ScreenShot.ScreenShotTimeStamp -->
+      </class> <!-- Practice.zeptoo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

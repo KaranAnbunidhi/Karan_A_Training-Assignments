@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+		<groups>
+			<run>
+				<exclude name="Sanity Test"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="TestNGReports.IndexAndFailedTC">
+				<methods>
+					<include name="showMsg2" />
+					<include name="showMsg3" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

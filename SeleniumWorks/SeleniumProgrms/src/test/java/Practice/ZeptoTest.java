@@ -16,7 +16,7 @@ public class ZeptoTest {
 	WebDriver driver;
 
 	@Test
-	public void productsCheckout() {
+	public void productsCheckout() throws InterruptedException {
 
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -37,7 +37,7 @@ public class ZeptoTest {
 				ExpectedConditions.presenceOfElementLocated(By.xpath("(//div[@data-testid='address-search-item'])[1]")))
 				.click();
 		
-		
+		Thread.sleep(3000);
 		WebElement searchBar = wait
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@aria-label='Search for products']")));
 		searchBar.click();

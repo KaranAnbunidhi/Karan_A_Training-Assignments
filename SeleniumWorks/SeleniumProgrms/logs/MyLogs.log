@@ -1,4 +1,0 @@
-18/12/2025 14:27:17  INFO testLogDemo:12 - Menu is clicked
-18/12/2025 14:27:17  WARN testLogDemo:13 - First name field is showing warning
-18/12/2025 14:27:17 ERROR testLogDemo:14 - Login failure for invalid crendentials
-18/12/2025 14:27:17 FATAL testLogDemo:15 - Internal Server Error, Website is not Displayed

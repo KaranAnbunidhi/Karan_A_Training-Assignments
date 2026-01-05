@@ -2,16 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-18T14:27:17 IST" name="Default suite" finished-at="2025-12-18T14:27:17 IST" duration-ms="43">
+  <suite started-at="2025-12-19T13:12:10 IST" name="Default suite" finished-at="2025-12-19T13:12:26 IST" duration-ms="15826">
     <groups>
     </groups>
-    <test started-at="2025-12-18T14:27:17 IST" name="Default test" finished-at="2025-12-18T14:27:17 IST" duration-ms="43">
-      <class name="LogDemo.testLogDemo">
-        <test-method signature="captureLogs()[pri:0, instance:LogDemo.testLogDemo@26275bef]" started-at="2025-12-18T14:27:17 IST" name="captureLogs" finished-at="2025-12-18T14:27:17 IST" duration-ms="10" status="PASS">
+    <test started-at="2025-12-19T13:12:10 IST" name="Default test" finished-at="2025-12-19T13:12:26 IST" duration-ms="15826">
+      <class name="ExtentReports.ExtentReportBase64">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ExtentReports.ExtentReportBase64@67080771]" started-at="2025-12-19T13:12:10 IST" name="setUp" finished-at="2025-12-19T13:12:14 IST" duration-ms="4658" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- captureLogs -->
-      </class> <!-- LogDemo.testLogDemo -->
+        </test-method> <!-- setUp -->
+        <test-method signature="testPlaceOrder()[pri:0, instance:ExtentReports.ExtentReportBase64@67080771]" started-at="2025-12-19T13:12:14 IST" name="testPlaceOrder" finished-at="2025-12-19T13:12:25 IST" duration-ms="10699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPlaceOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ExtentReports.ExtentReportBase64@67080771]" started-at="2025-12-19T13:12:25 IST" name="tearDown" finished-at="2025-12-19T13:12:26 IST" duration-ms="433" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ExtentReports.ExtentReportBase64 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Practice.ZeptoTest">
+      <class name="ExtentReports.ExtentReportsDemo">
         <methods>
-          <include name="productsCheckout"/>
+          <include name="setUP"/>
+          <include name="testPlaceOrder"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- Practice.ZeptoTest -->
+      </class> <!-- ExtentReports.ExtentReportsDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

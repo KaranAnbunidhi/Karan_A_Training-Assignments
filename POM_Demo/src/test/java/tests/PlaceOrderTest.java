@@ -50,7 +50,6 @@ public class PlaceOrderTest extends Base {
     public void beforeClass() {
 
         launchBrowser();
-        test = extentReports.createTest("Place Order Test");
 
         loginPage = new LoginPage(driver, wait);
         selectProductPage = new SelectProductPage(driver, wait);
@@ -72,8 +71,10 @@ public class PlaceOrderTest extends Base {
     	)
     public void testPlaceOrder(String username, String password) {
     	currentStep=0;
-        try {
+    	test = extentReports.createTest("Place Order Test - " + username);
 
+        try {
+        	
         	loginPage.validateLogin(username, password);
             logStep("Login successful for user: " + username);
 
@@ -108,7 +109,7 @@ public class PlaceOrderTest extends Base {
                 test.log(Status.SKIP, steps.get(i) + " skipped");
             }
 
-            logger.error("Test failed at step: " + steps.get(currentStep), e);
+            logger.error("Test failed at step: " + steps.get(currentStep)+ " for user: "+ username, e);
             throw e;
         }
     }

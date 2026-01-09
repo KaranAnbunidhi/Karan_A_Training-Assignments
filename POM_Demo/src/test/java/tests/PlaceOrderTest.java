@@ -101,7 +101,7 @@ public class PlaceOrderTest extends Base {
                     driver,
                     test,
                     Status.FAIL,
-                    steps.get(currentStep) + " Failed"
+                    steps.get(currentStep) + " Failed for user: "+ username
             );
 
             for (int i = currentStep; i < steps.size(); i++) {

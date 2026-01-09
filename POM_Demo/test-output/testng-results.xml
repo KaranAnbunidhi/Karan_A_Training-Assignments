@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-09T09:52:43 IST" name="Default suite" finished-at="2026-01-09T09:53:08 IST" duration-ms="25490">
+  <suite started-at="2026-01-09T10:02:26 IST" name="Default suite" finished-at="2026-01-09T10:02:52 IST" duration-ms="26154">
     <groups>
     </groups>
-    <test started-at="2026-01-09T09:52:43 IST" name="Default test" finished-at="2026-01-09T09:53:08 IST" duration-ms="25490">
+    <test started-at="2026-01-09T10:02:26 IST" name="Default test" finished-at="2026-01-09T10:02:52 IST" duration-ms="26154">
       <class name="tests.PlaceOrderTest">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.PlaceOrderTest@120f102b]" started-at="2026-01-09T09:52:43 IST" name="beforeClass" finished-at="2026-01-09T09:52:45 IST" duration-ms="2007" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.PlaceOrderTest@120f102b]" started-at="2026-01-09T10:02:26 IST" name="beforeClass" finished-at="2026-01-09T10:02:28 IST" duration-ms="2276" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="testPlaceOrder(java.lang.String,java.lang.String)[pri:0, instance:tests.PlaceOrderTest@120f102b]" started-at="2026-01-09T09:52:46 IST" name="testPlaceOrder" data-provider="loginData" finished-at="2026-01-09T09:52:47 IST" duration-ms="1542" status="PASS">
+        <test-method signature="testPlaceOrder(java.lang.String,java.lang.String)[pri:0, instance:tests.PlaceOrderTest@120f102b]" started-at="2026-01-09T10:02:29 IST" name="testPlaceOrder" data-provider="loginData" finished-at="2026-01-09T10:02:31 IST" duration-ms="1651" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPlaceOrder -->
-        <test-method signature="testPlaceOrder(java.lang.String,java.lang.String)[pri:0, instance:tests.PlaceOrderTest@120f102b]" started-at="2026-01-09T09:52:47 IST" name="testPlaceOrder" data-provider="loginData" finished-at="2026-01-09T09:53:08 IST" duration-ms="20803" status="FAIL">
+        <test-method signature="testPlaceOrder(java.lang.String,java.lang.String)[pri:0, instance:tests.PlaceOrderTest@120f102b]" started-at="2026-01-09T10:02:31 IST" name="testPlaceOrder" data-provider="loginData" finished-at="2026-01-09T10:02:51 IST" duration-ms="20698" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -46,16 +46,16 @@
 Build info: version: '4.38.0', revision: '6b412e825c*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.171, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\kingk\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62788}, goog:processID: 24024, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62788/devtoo..., se:cdpVersion: 143.0.7499.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e6ec2d92385b8226029cb9bac0b1db7d]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.171, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\kingk\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54767}, goog:processID: 20904, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54767/devtoo..., se:cdpVersion: 143.0.7499.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e88150ddaf6dd3cc18b1c3ebf4036633]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: [data-test='title'] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.38.0', revision: '6b412e825c*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.171, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\kingk\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62788}, goog:processID: 24024, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62788/devtoo..., se:cdpVersion: 143.0.7499.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e6ec2d92385b8226029cb9bac0b1db7d
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.171, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\kingk\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54767}, goog:processID: 20904, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54767/devtoo..., se:cdpVersion: 143.0.7499.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e88150ddaf6dd3cc18b1c3ebf4036633
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 at pages.LoginPage.validateLogin(LoginPage.java:36)
@@ -92,7 +92,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPlaceOrder -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:tests.PlaceOrderTest@120f102b]" started-at="2026-01-09T09:53:08 IST" name="afterClass" finished-at="2026-01-09T09:53:08 IST" duration-ms="213" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:tests.PlaceOrderTest@120f102b]" started-at="2026-01-09T10:02:51 IST" name="afterClass" finished-at="2026-01-09T10:02:52 IST" duration-ms="431" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
